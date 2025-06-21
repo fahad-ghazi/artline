@@ -1,0 +1,454 @@
+/* Fonts */
+@font-face {
+  font-weight: 275;
+  font-display: swap;
+  font-family: "Montserrat-Arabic";
+  src: url("./fonts/Montserrat-Arabic\ ExtraLight\ 275.otf") format("opentype");
+}
+@font-face {
+  font-weight: 300;
+  font-display: swap;
+  font-family: "Montserrat-Arabic";
+  src: url("./fonts/Montserrat-Arabic\ Light\ 300.otf") format("opentype");
+}
+@font-face {
+  font-weight: 500;
+  font-display: swap;
+  font-family: "Montserrat-Arabic";
+  src: url("./fonts/Montserrat-Arabic\ Medium\ 500.otf") format("opentype");
+}
+@font-face {
+  font-weight: 400;
+  font-display: swap;
+  font-family: "Montserrat-Arabic";
+  src: url("./fonts/Montserrat-Arabic\ Regular\ 400.otf") format("opentype");
+}
+@font-face {
+  font-weight: 600;
+  font-display: swap;
+  font-family: "Montserrat-Arabic";
+  src: url("./fonts/Montserrat-Arabic\ SemiBold\ 600.otf") format("opentype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat-Arabic", sans-serif;
+  direction: rtl;
+  overflow-x: hidden;
+  background-color: #1b1f24;
+  color: #fff;
+  font-weight: 400;
+}
+
+:any-link {
+  text-decoration: none;
+  color: #fff;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  max-width: 1250px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+section {
+  padding-block: 50px;
+}
+p {
+  text-wrap: balance;
+}
+/* Button */
+.btn {
+  position: relative;
+  cursor: pointer;
+  background: #f1cb00;
+  overflow: hidden;
+  padding: 12px 24px;
+  border: 1px solid #fff;
+  border-radius: 31px;
+  width: fit-content;
+}
+.btn a {
+  position: relative;
+  z-index: 10;
+  transition: all 0.4s;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+}
+.btn::before,
+.btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.btn::before {
+  content: "";
+  background: #1b1f24;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+.btn:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+.btn:hover {
+  border-color: #f1cb00;
+}
+.btn:hover a {
+  color: #000000;
+}
+.skew {
+  background-color: transparent;
+  position: relative;
+}
+.skew::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff5e1;
+  transform: skewY(-2deg);
+  z-index: -1;
+}
+/* Header */
+header {
+  border-bottom: 1px solid #a5a5a5;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 10px 15px;
+}
+.header-content .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.header-content .logo span {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.header-content img {
+  width: 53px;
+  object-fit: cover;
+  height: auto;
+}
+/* Hero Section */
+
+.hero-content {
+  max-width: 865px;
+  text-align: center;
+  width: 100%;
+  padding-block: 30px;
+  margin: 0 auto;
+  position: relative;
+}
+.hero-content .small {
+  position: absolute;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+}
+.hero-content .small.left {
+  left: 0;
+}
+.hero-content .small.right {
+  right: 0;
+  top: 160px;
+}
+
+.hero-content h1 {
+  font-size: 46px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding-top: 15px;
+  color: #a5a5a5;
+}
+.hero-content p span {
+  color: #fdc799;
+  font-weight: 700;
+}
+.hero-content p:nth-of-type(2) {
+  font-size: 25px;
+}
+.hero-content img {
+  margin-top: 40px;
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  border-radius: 256px;
+}
+
+.hero-content .btn {
+  margin: 40px auto 30px;
+  padding: 20px 35px;
+  background: #fff;
+  border-color: #f1cb00;
+}
+.hero-content .btn a {
+  color: #000000;
+  font-weight: 500;
+}
+.hero-content .btn::before {
+  background: #f1cb00;
+}
+.hero-content .btn:hover {
+  border-color: #fff;
+}
+.hero-content .image {
+  position: relative;
+}
+.hero-content .image a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero-content .image svg {
+  width: 16px;
+  height: auto;
+}
+/* Features Section */
+
+.features-content .title {
+  padding-bottom: 30px;
+  text-align: center;
+  text-wrap: balance;
+}
+.features-content .title h2 {
+  color: #000000;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: 1.4;
+  margin: 0 auto 25px;
+}
+.features-content .boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+.features-content .boxes .box {
+  color: #000000;
+  max-width: 325px;
+  text-align: center;
+}
+.features-content .boxes .box img {
+  border-radius: 50%;
+  max-width: 248px;
+  width: 100%;
+  height: auto;
+}
+.features-content .boxes .box h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.features-content .boxes .box p {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 300;
+  line-height: 2;
+}
+.features-content .btn {
+  border: none;
+  margin: 50px auto 30px;
+}
+
+/* services Section */
+.services-content {
+  width: 100%;
+  text-align: center;
+}
+.services-content .title {
+  padding-bottom: 50px;
+}
+.services-content .title h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #f1cb00;
+}
+.services-content .boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding-block: 40px;
+}
+.services-content .boxes .box {
+  position: relative;
+  width: 100%;
+}
+.services-content .boxes .box img {
+  width: 100%;
+  border-radius: 32px;
+  object-fit: cover;
+}
+.services-content .boxes .box p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  width: 100%;
+  max-width: 95%;
+}
+.services-content .btn {
+  margin-top: 30px;
+  margin: 0 auto;
+  padding: 16px 28px;
+  background: #fff;
+  border-color: #f1cb00;
+}
+.services-content .btn a {
+  color: #000000;
+  font-weight: 500;
+}
+.services-content .btn::before {
+  background: #f1cb00;
+}
+.services-content .btn:hover {
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .services-content .boxes {
+    grid-template-columns: 1fr;
+  }
+  .services-content .title {
+    padding-bottom: 30px;
+  }
+}
+
+/* Contact US */
+
+.contact-content {
+  padding-block: 30px;
+}
+.contact-content .title {
+  text-align: center;
+  text-wrap: balance;
+}
+.contact-content .title h2 {
+  color: #000000;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: 1.4;
+  max-width: 450px;
+  margin: 0 auto 18px;
+}
+.contact-content .title p {
+  color: #1b1f24;
+  font-weight: 100;
+  font-size: 22px;
+}
+.contact-content .title a {
+  display: inline-block;
+  margin-top: 20px;
+}
+.contact-content .title svg {
+  width: 80px;
+  height: 60px;
+}
+/* Footer Section */
+.footer-section .content {
+  padding-top: 40px;
+  text-align: center;
+}
+.footer-section .content .title {
+  margin-top: 30px;
+}
+.footer-section .content .title h2 {
+  color: #f1cb00;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.footer-section .content .title p {
+  font-size: 26px;
+  font-weight: 300;
+}
+.footer-section .content a {
+  display: inline-flex;
+  padding-block: 30px;
+}
+.footer-section .content img {
+  width: 90px;
+  height: auto;
+}
+.footer-section .copyright {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #222931;
+  padding-block: 10px;
+}
+
+@media screen and (max-width: 991px) {
+}
+@media screen and (max-width: 768px) {
+  .hero-content .small {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .header-content img {
+    width: 35px;
+  }
+  .hero-content .image a {
+    display: none;
+  }
+  .hero-content {
+    padding-top: 0;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .hero-content p:nth-of-type(2) {
+    font-size: 20px;
+  }
+}
